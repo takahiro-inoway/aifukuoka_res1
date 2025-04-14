@@ -1,3 +1,13 @@
 <html>
-  test
+  <pre id="pre"></pre>
+  <script>
+    window.onload = function() {
+      // URLパラメーターをオブジェクトに変換
+      const urlParams = Object.fromEntries(new URLSearchParams(window.location.search));
+      const pre = document.getElementById('pre');
+      
+      // オブジェクトを文字列化して表示
+      pre.textContent = JSON.stringify(urlParams, null, 2);
+    };
+  </script>
 </html>
